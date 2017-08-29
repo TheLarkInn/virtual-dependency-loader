@@ -22,9 +22,8 @@ test('should run with no errors or warnings', async () => {
 test('should append transformations to JavaScript module', async () => {
   const buildStats = await runWebpackExampleInMemory('simple');
   const { modules } = buildStats;
-
-  const moduleToTest = modules[0].source()._source._value; //eslint-disable-line
-  const loadedString = '* Original Source From Loader';
+  const moduleToTest = modules[3].source()._source._value; //eslint-disable-line
+  const loadedString = 'export default "virtual"';
 
   expect(moduleToTest).toEqual(expect.stringContaining(loadedString));
   expect(moduleToTest).toMatchSnapshot();
