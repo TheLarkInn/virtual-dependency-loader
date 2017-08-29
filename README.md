@@ -48,5 +48,6 @@ class Bar {
 const baz = new Bar(hello);
 ```
 
-
+## Credit
+Hats off to Jason Miller for this idea while he was working on his (vue/polymer/sfc)=>preact compiler/loader. 
 
