@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Example Loader Tests: Fixture: simple-file source of loader should be equal to code option 1`] = `
+exports[`inline-loader Tests: Fixture: simple-file source of loader should be equal to code option 1`] = `
 Object {
   "cacheable": true,
   "contextDependencies": Array [],
@@ -81,6 +81,93 @@ Object {
   },
   "result": Array [
     "console.log(\\"I am the real code\\")",
+  ],
+}
+`;
+
+exports[`inline-loader Tests: Fixture: simple-file source of loader should be equal to code option 2`] = `
+Object {
+  "cacheable": true,
+  "contextDependencies": Array [],
+  "fileDependencies": Array [
+    "/Users/wecomm/seanlarkin/code/virtual-dependency-loader/test/fixtures/simple-file.js",
+  ],
+  "resourceBuffer": Object {
+    "data": Array [
+      105,
+      109,
+      112,
+      111,
+      114,
+      116,
+      32,
+      102,
+      111,
+      111,
+      32,
+      102,
+      114,
+      111,
+      109,
+      32,
+      34,
+      46,
+      47,
+      102,
+      111,
+      111,
+      34,
+      59,
+      32,
+      47,
+      47,
+      32,
+      101,
+      115,
+      108,
+      105,
+      110,
+      116,
+      45,
+      100,
+      105,
+      115,
+      97,
+      98,
+      108,
+      101,
+      45,
+      108,
+      105,
+      110,
+      101,
+      10,
+      10,
+      99,
+      111,
+      110,
+      115,
+      111,
+      108,
+      101,
+      46,
+      108,
+      111,
+      103,
+      40,
+      102,
+      111,
+      111,
+      41,
+      59,
+      10,
+    ],
+    "type": "Buffer",
+  },
+  "result": Array [
+    "
+    coonsole.log(\\"!@!#@#@#%^$%#3wert34523452345fgfsdgsdfgsdfgasdfasdf\\".length);
+  ",
   ],
 }
 `;

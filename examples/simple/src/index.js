@@ -1,4 +1,5 @@
 import esmModule from './static-esm-module';
+import file from './override.thisfile';
 
 const getLazyModule = () => System.import('./lazy-module');
 
@@ -8,4 +9,4 @@ setTimeout(() => {
   });
 }, 300);
 
-console.log(esmModule); //eslint-disable-line
+console.log(esmModule, file); //eslint-disable-line

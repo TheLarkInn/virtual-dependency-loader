@@ -9,16 +9,13 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
-        include: [
-          /static-esm-module/,
-        ],
+        test: /\.thisfile$/,
         use: [
           {
             loader: 'inline-loader',
             options: {
-              code: 'export default "virtual";',
-              filename: 'sofake.reallyfake.js',
+              code: 'console.log("hello world")u',
+              filename: 'sofake.reallyfake.thisfile',
             },
           },
         ],
@@ -27,7 +24,7 @@ module.exports = {
   },
   resolveLoader: {
     alias: {
-      'inline-loader': require.resolve('../../src/'),
+      'inline-loader': require.resolve('../../dist/index.js'),
     },
   },
 };
