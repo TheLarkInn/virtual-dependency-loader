@@ -1,6 +1,6 @@
 {
   "name": "virtual-dependency-loader",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/thelarkinn/virtual-dependency-loader.git"
