@@ -3,6 +3,9 @@ Take a single file, process pieces of that file as "dependencies" in loader chai
 
 ## Usage
 
+### Installation
+`npm install --save virtual-dependency-loader`
+
 ### Inside of another loader implementation
 **loader.js**
 ```javascript
@@ -20,7 +23,7 @@ export default function someLoader(source, map, ast) {
     filename: `${resourcePath}.script.js`
   });
 
-  const resource = stringifyRequest(`inline-loader?${inlineLoaderOptions}!${dummyFilePath}`)
+  const resource = stringifyRequest(`virtual-dependency-loader?${inlineLoaderOptions}!${dummyFilePath}`)
 
   const virtualizedSourceProcessedByOtherLoaders = loadModule(resource, (err, code, map) => {
     const newSource = [normalSource, code].join("__virtual_dependency__");
